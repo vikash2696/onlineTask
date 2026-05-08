@@ -14,19 +14,15 @@ Visit: http://localhost:8080
 
 ## Deploy to Cloudflare Pages
 
-Deploy the static site to Cloudflare:
+**Via Cloudflare Dashboard (Automatic):**
+1. Connect your Git repository to Cloudflare Pages
+2. Configure build settings:
+   - **Build command**: (leave empty)
+   - **Build output directory**: `public`
+3. Deploy automatically on git push
 
+**Via Wrangler CLI (Manual):**
 ```bash
-# Install Wrangler (if not already installed)
-npm install -g wrangler
-
-# Login to Cloudflare
-wrangler login
-
-# Deploy (use the correct Pages command)
-wrangler pages deploy public --project-name=golang2-static-site
-
-# Or using npx without global install:
 npx wrangler pages deploy public --project-name=golang2-static-site
 ```
 
@@ -36,7 +32,7 @@ npx wrangler pages deploy public --project-name=golang2-static-site
 GoLang2/
 ├── menu.go          # Go HTTP server (local development)
 ├── go.mod              # Go module file
-├── wrangler.toml       # Cloudflare configuration
+├── package.json        # NPM config (optional)
 ├── public/             # Static files for Cloudflare Pages
 │   └── index.html      # Main HTML file
 └── README.md           # This file
