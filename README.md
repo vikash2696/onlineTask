@@ -14,14 +14,18 @@ Visit: http://localhost:8080
 
 ## Deploy to Cloudflare Pages
 
-**Via Cloudflare Dashboard (Automatic):**
-1. Connect your Git repository to Cloudflare Pages
-2. Configure build settings:
-   - **Build command**: (leave empty)
-   - **Build output directory**: `public`
-3. Deploy automatically on git push
+**Option 1: Via Cloudflare Dashboard (Recommended):**
+1. Go to your Cloudflare Pages project settings
+2. Change **Build command** to: (empty - delete `npx wrangler deploy`)
+3. Set **Build output directory** to: `public`
+4. Save and redeploy
 
-**Via Wrangler CLI (Manual):**
+**Option 2: Keep using wrangler.toml:**
+The wrangler.toml is now configured correctly. In Cloudflare Pages settings:
+- Set **Build command** to: (empty)
+- It will auto-deploy the `public` folder
+
+**Option 3: Manual CLI deployment:**
 ```bash
 npx wrangler pages deploy public --project-name=golang2-static-site
 ```
@@ -32,6 +36,7 @@ npx wrangler pages deploy public --project-name=golang2-static-site
 GoLang2/
 ├── menu.go          # Go HTTP server (local development)
 ├── go.mod              # Go module file
+├── wrangler.toml       # Cloudflare configuration
 ├── package.json        # NPM config (optional)
 ├── public/             # Static files for Cloudflare Pages
 │   └── index.html      # Main HTML file
