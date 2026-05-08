@@ -23,8 +23,11 @@ npm install -g wrangler
 # Login to Cloudflare
 wrangler login
 
-# Deploy
+# Deploy (use the correct Pages command)
 wrangler pages deploy public --project-name=golang2-static-site
+
+# Or using npx without global install:
+npx wrangler pages deploy public --project-name=golang2-static-site
 ```
 
 ## Project Structure
