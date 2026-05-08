@@ -1,0 +1,12 @@
+{
+  "name": "golang2-static-site",
+  "version": "1.0.0",
+  "description": "Static site for Cloudflare Pages",
+  "scripts": {
+    "deploy": "echo 'Static site deployment - no build required'",
+    "build": "echo 'No build step needed for static HTML'"
+  },
+  "keywords": ["cloudflare", "pages", "static"],
+  "author": "",
+  "license": "MIT"
+}
