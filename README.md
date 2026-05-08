@@ -7,7 +7,7 @@ This project contains both a Go HTTP server and a Cloudflare Pages static site.
 Run the Go server locally:
 
 ```bash
-go run emanual.go
+go run menu.go
 ```
 
 Visit: http://localhost:8080
@@ -34,7 +34,7 @@ npx wrangler pages deploy public --project-name=golang2-static-site
 
 ```
 GoLang2/
-├── emanual.go          # Go HTTP server (local development)
+├── menu.go          # Go HTTP server (local development)
 ├── go.mod              # Go module file
 ├── wrangler.toml       # Cloudflare configuration
 ├── public/             # Static files for Cloudflare Pages
